@@ -70,6 +70,10 @@ def generate_plots(N, mu, sigma2, S):
     slope_more_extreme = sum(s > slope for s in slopes) / S
     intercept_more_extreme = sum(i < intercept for i in intercepts) / S
 
+    # %
+    slope_more_extreme *= 100
+    intercept_more_extreme *= 100
+
     return plot1_path, plot2_path, slope_more_extreme, intercept_more_extreme
 
 @app.route("/", methods=["GET", "POST"])
