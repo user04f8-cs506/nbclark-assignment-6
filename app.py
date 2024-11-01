@@ -14,7 +14,7 @@ def generate_plots(N, mu, sigma2, S):
     # Generate random dataset X of size N with values between 0 and 1
     X = np.random.rand(N)
     # Generate dataset Y with normal additive error (mean mu, variance sigma^2)
-    Y = X + np.random.normal(mu, np.sqrt(sigma2), N)
+    Y = np.random.normal(mu, np.sqrt(sigma2), N)
 
     # Fit a linear regression model to X and Y
     model = LinearRegression()
